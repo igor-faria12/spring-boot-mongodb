@@ -3,16 +3,22 @@ package com.igorf.wrkmongodb.domain;
 import java.io.Serializable;
 import java.util.Date;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import com.igorf.wrkmongodb.dto.AuthorDTO;
 
+@Document
 public class Post implements Serializable{
 	private static final long serialVersionUID = -8616734896601142249L;
 	
+	@Id
 	private String id;
 	private Date date;
 	private String title;
 	private String body;
 	private AuthorDTO author;
+	
 	
 	public Post() {
 		
