@@ -36,7 +36,11 @@ public class UserService {
 	}
 	
 	public User update(User obj) {
+<<<<<<< HEAD
 		User newObj = findById(obj.getId());
+=======
+		User newObj = this.findById(obj.getId());
+>>>>>>> bfd178bd7270d062fa9093576c958a6c2d82646f
 		updateData(newObj, obj);
 		return repo.save(newObj);
 	}
