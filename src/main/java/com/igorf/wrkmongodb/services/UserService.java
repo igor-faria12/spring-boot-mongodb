@@ -36,7 +36,7 @@ public class UserService {
 	}
 	
 	public User update(User obj) {
-		User newObj = this.findById(obj.getId());
+		User newObj = findById(obj.getId());
 		updateData(newObj, obj);
 		return repo.save(newObj);
 	}
